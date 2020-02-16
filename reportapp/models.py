@@ -103,9 +103,7 @@ class Report(models.Model):
                 " you can not generate future report"
             )
 
-    def get_absolute_url(self):
-        from django.urls import reverse
-        return reverse('dashboard')
+
 
 
 

@@ -28,10 +28,10 @@ EMAIL_USE_SSL = False
 SECRET_KEY = '#afxel-ctw6qbzvr4g1#^uvty#f-v*b@x&_k-dze(6nv$3uo+v'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 # 'district-demo-app.herokuapp.com','district_reporting.com'
 
-ALLOWED_HOSTS = ['district-demo-app.herokuapp.com','district_reporting.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -91,11 +91,11 @@ WSGI_APPLICATION = 'district_reporting.wsgi.application'
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.config()
-    # 'default':{
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    # }
+    # 'default': dj_database_url.config()
+    'default':{
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
 }
 
 

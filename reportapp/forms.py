@@ -19,7 +19,5 @@ class ReportForm(forms.ModelForm):
         self.request = kwargs.pop("request")
         super(ReportForm, self).__init__(*args, **kwargs)
         self.fields["report_name"].queryset = TypesOfReport.objects.filter(owner=self.request.user.user_profile)
-        # self.fields['report_type'].help_text = "urugero: raporo y' imari ni igena migambi"
-        # self.fields['report_file'].help_text = 'urugero:  file igaragaza raporo utanze '
 
 
